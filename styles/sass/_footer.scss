@@ -1,0 +1,44 @@
+footer {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(173, 167, 255);
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: salmon;
+        height: 85%;
+        width: 50vw;
+        padding: 20px;
+        div {
+            width: 75%;
+            label {
+                display: block;
+            }
+            input[type="text"] {
+                width: 100%;
+                height: 50px;
+            }
+            textarea {
+                width: 100%;
+                height: 300px;
+            }
+        }
+        .submit-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input[type="submit"],
+            input[type="reset"] {
+                margin: 2%;
+            }
+        }
+    }
+    h2 {
+        margin: 20px;
+    }
+}

@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: hotpink;
+    nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            li {
+                margin: 10px;
+            }
+        }
+    }
+    div.hero {
+        height: 90vh;
+        background-color: indianred;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,58 @@
+main {
+    .about {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(173, 167, 255);
+        .img-container {
+            width: 500px;
+            background-color: indigo;
+        }
+        .text-container {
+            width: 700px;
+            background-color: lawngreen;
+        }
+    }
+    .projects {
+        display: flex;
+        justify-content: center;
+        background-color: purple;
+        height: 100vh;
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 1500px;
+            background-color: lime;
+            .project {
+                width: 700px;
+                height: 450px;
+                background-color: lightsalmon;
+            }
+        }
+    }
+    .skills {
+        height: 70vh;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .languages {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: slategrey;
+            width: 90%;
+            height: 100%;
+            .language-container {
+                height: 150px;
+                width: 150px;
+                background-color: seagreen;
+            }
+        }
+    }
+}
+
