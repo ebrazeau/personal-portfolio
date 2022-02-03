@@ -425,11 +425,47 @@ main .skills .languages {
   height: 100%;
 }
 main .skills .languages .language-container {
-  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
   width: 150px;
   background-color: seagreen;
+  color: white;
+}
+main .skills .languages .language-container i {
+  font-size: 100px;
+}
+main .skills .languages .language-container span {
+  font-size: 1rem;
 }
 
+@font-face {
+  font-family: headingFont;
+  src: url(/assets/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: bodyFont;
+  src: url(/assets/PPStellar-Regular.ttf);
+}
+@font-face {
+  font-family: accentFont;
+  src: url(/assets/PPNeueMachina-Light.ttf);
+}
+@font-face {
+  font-family: accentFontBold;
+  src: url(/assets/PPNeueMontreal-Bold.ttf);
+}
 /* ======== TYPOGRAPHY ======== */
 html {
   font-size: 125%;
@@ -442,10 +478,19 @@ h2,
 h3,
 h4,
 h5,
-h6,
-label {
+h6 {
   margin: 0;
   text-transform: uppercase;
+  font-family: headingFont;
+}
+
+label {
+  font-family: accentFont;
+}
+
+span {
+  font-family: accentFont;
+  font-size: 1.5rem;
 }
 
 h1 {
@@ -465,19 +510,20 @@ h4 {
 }
 
 p {
+  font-family: bodyFont;
   font-size: 1rem;
 }
 
 a {
-  font-weight: bolder;
+  color: black;
   text-decoration: none;
 }
 
 a:hover {
+  color: white;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   cursor: pointer;
-  background-color: grey;
 }
 
 /* ================ GENERAL ================== */
@@ -489,6 +535,7 @@ a:hover {
 }
 
 ul {
+  font-family: accentFont;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -497,6 +544,7 @@ ul {
 button,
 input[type=submit],
 input[type=reset] {
+  font-family: accentFont;
   text-transform: uppercase;
   font-weight: bolder;
   border: 0;
@@ -510,8 +558,14 @@ input[type=reset]:hover {
   background: linear-gradient(rgba(221, 140, 11, 0.25), rgba(221, 140, 11, 0.25));
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+  cursor: pointer;
 }
 
 textarea {
   resize: none;
+  border: 0px;
+}
+
+input[type=text] {
+  border: none;
 }
