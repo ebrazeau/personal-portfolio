@@ -243,8 +243,18 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
-  background-color: #95aed8;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1000px;
+  background: #678dce;
+}
+header nav {
+  margin-bottom: 20px;
+  height: 30px;
 }
 header nav ul {
   display: -webkit-box;
@@ -253,12 +263,20 @@ header nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
 }
-header nav ul li {
+header nav ul li.nav-link {
+  height: 100%;
+  width: 100%;
   margin: 10px;
 }
 header div.hero {
-  height: 90vh;
+  height: 90%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +290,7 @@ header div.hero {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #95aed8;
 }
 header div.hero h1 {
   font-size: 5.5rem;
