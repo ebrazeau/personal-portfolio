@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: bodyFont;
-    src: url(/assets/PPStellar-Regular.ttf);
+    src: url(/assets/PPTelegraf-Regular.ttf);
 }
 
 @font-face {
@@ -86,13 +86,6 @@ a:hover {
 
 /* ================ GENERAL ================== */
 
-.body-wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-    width: 90%;
-    height: 100%;
-}
-
 ul {
     font-family: accentFont;
     list-style-type: none;
@@ -102,17 +95,22 @@ ul {
 
 button,
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+.link-btn {
     font-family: accentFont;
+    letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: bolder;
     border: 0;
     padding: 15px 30px;
+    background-color: cadetblue;
+    display: block;
 }
 
 button:hover,
 input[type="submit"]:hover,
-input[type="reset"]:hover {
+input[type="reset"]:hover,
+.link-btn:hover {
     background: linear-gradient(rgba(221, 140, 11, 0.25), rgba(221, 140, 11, 0.25));
     transition-duration: 0.2s;
     cursor: pointer;

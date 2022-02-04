@@ -21,3 +21,31 @@ header {
         align-items: center;
     }
 }
+
+@media (max-width: 720px) {
+    header {
+        div.hero {
+            h1 {
+                text-align: center;
+                line-height: 90px;
+                font-size: 4.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 100vh;
+        div.hero {
+            h1 {
+                text-align: center;
+                line-height: 70px;
+                font-size: 3.5rem;
+            }
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 footer {
-    height: 90vh;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,13 +11,19 @@ footer {
         justify-content: center;
         align-items: center;
         background-color: salmon;
-        height: 85%;
-        width: 50vw;
+        height: 800px;
+        width: 90vw;
         padding: 20px;
-        div {
-            width: 75%;
+        .name, .email, .comments {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 70%;
+            margin-top: 15px;
             label {
-                display: block;
+                margin-bottom: 7px;
+                text-align: start;
             }
             input[type="text"] {
                 width: 100%;
@@ -26,6 +32,7 @@ footer {
             textarea {
                 width: 100%;
                 height: 300px;
+                margin-bottom: 20px;
             }
         }
         .submit-form {
@@ -35,6 +42,7 @@ footer {
             input[type="submit"],
             input[type="reset"] {
                 margin: 2%;
+                width: 250px;
             }
         }
     }
@@ -42,3 +50,44 @@ footer {
         margin: 20px;
     }
 }
+
+
+@media (max-width: 1080px) {
+    footer {
+        form {
+            .name, .email, .comments {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    footer {
+        height: 1000px;
+        form {
+            height: 900px;
+            .submit-form {
+                flex-direction: column;
+                width: 90%;
+                input[type="submit"],
+                input[type="reset"] {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        form {
+            h2 {
+                line-height: 45px;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+

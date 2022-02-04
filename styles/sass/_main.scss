@@ -10,13 +10,23 @@ main {
             background-color: indigo;
         }
         .text-container {
-            width: 700px;
+            padding: 50px;
+            margin: 20px;
+            width: 800px;
             background-color: lawngreen;
+            h2 {
+                margin-bottom: 40px;
+            }
+            .link-btn {
+                margin-top: 40px;
+                width: 400px;
+            }
         }
     }
     .projects {
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: purple;
         height: 100vh;
         .projects-container {
@@ -27,16 +37,23 @@ main {
             width: 1500px;
             background-color: lime;
             .project {
+                margin: 10px;
                 width: 700px;
                 height: 450px;
                 background-color: lightsalmon;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }
     .skills {
-        height: 70vh;
+        height: 80vh;
         background-color: red;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         .languages {
@@ -46,7 +63,7 @@ main {
             flex-wrap: wrap;
             background-color: slategrey;
             width: 90%;
-            height: 100%;
+            height: 450px;
             .language-container {
                 display: flex;
                 flex-direction: column;
@@ -66,4 +83,149 @@ main {
         }
     }
 }
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (max-width: 1500px) {
+    main {
+        .about {
+            flex-direction: column;
+            height: 1250px;
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 550px;
+                width: 90%;
+                h2 {
+                    margin: 10px;
+                }
+                .link-btn {
+                    margin: 0px;
+                }
+            }
+        }
+        .projects {
+            height: 980px;
+            .projects-container {
+                width: 100%;
+                height: 1000px;
+                justify-content: center;
+                align-items: center;
+                .project {
+                    width: 45%;
+                    background-color: aqua;
+                }
+            }
+        }
+        .skills {
+            height: 70vh;
+            h2 {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    main {
+        .skills {
+            height: 700px;
+            .languages {
+                height: 500px;
+            }
+        }
+        .about {
+            height: 1350px;
+            .text-container {
+                height: 700px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 885px) {
+    main {
+        .about {
+            .text-container {
+                .about-me {
+                    width: 100%;
+                    background-color: cornflowerblue;
+                    overflow-y: scroll;
+                    margin: 30px;
+                }
+            }
+        }
+        .projects {
+            height: 1700px;
+            .projects-container {
+                width: 100%;
+                height: 1600px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                .project {
+                    width: 85%;
+                    background-color: purple;
+                }
+            }
+        }
+        .skills {
+            height: 900px;
+            .languages {
+                height: 700px;
+            }
+        }
+    }
+} 
+
+@media (max-width: 720px) {
+    main {
+        .about {
+            .text-container {
+                .link-btn {
+                    width: 90%;
+                }
+            }
+        }
+        .skills {
+            height: 700px;
+            .languages {
+                height: 500px;
+                .language-container {
+                    width: 100px;
+                    height: 150px;
+                    i {
+                        font-size: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        .skills {
+            height: 800px;
+            .languages {
+                height: 650px;
+                .language-container {
+                    width: 85px;
+                    height: 135px;
+                    i {
+                        font-size: 60px;
+                    }
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
