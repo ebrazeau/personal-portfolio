@@ -624,7 +624,6 @@ main .skills .languages .language-container span {
   }
   main .projects .projects-container .project {
     width: 45%;
-    background-color: aqua;
   }
   main .skills {
     height: 70vh;
@@ -681,7 +680,6 @@ main .skills .languages .language-container span {
   }
   main .projects .projects-container .project {
     width: 85%;
-    background-color: purple;
   }
   main .skills {
     height: 900px;
