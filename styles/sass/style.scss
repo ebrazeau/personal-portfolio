@@ -103,17 +103,19 @@ input[type="reset"],
     font-weight: bolder;
     border: 0;
     padding: 15px 30px;
-    background-color: cadetblue;
+    background-color: rgb(184, 184, 184);
     display: block;
+    border: 1px solid black;
 }
 
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
 .link-btn:hover {
-    background: linear-gradient(rgba(221, 140, 11, 0.25), rgba(221, 140, 11, 0.25));
+    background: linear-gradient(rgba(129, 129, 129, 0.25), rgba(0, 0, 0, 0.25));
     transition-duration: 0.2s;
     cursor: pointer;
+    color: white;
 }
 
 textarea {
