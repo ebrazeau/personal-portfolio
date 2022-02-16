@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <script src="https://kit.fontawesome.com/198a7912e2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -34,30 +35,71 @@
                 <img src="assets/me-profile.png">
             </div>
             <div class="text-container">
-                <h2>Hello, I'm Erin!</h2>
+                <h2>👋🏻 Hello, I'm Erin!</h2>
                 <div class="about-me">
-                    <p>I'm a self-taught front-end developer and life-long learner who is always looking for an opportunity to make the web more beautiful, accessible, and a better place for all.<p>
-                    <p>I have a background in videography and content creation, which drives my interest in web development and the narratives we encounter while using the web. I love making seamless & functional user interfaces that people love to use.</p>
-                    <p>I'm currently working on learning technologies like React and bringing my knowledge of motion design to the web with libraries like GSAP, anime.js and Three.js.</p>
+                    <p>I'm a self-taught front-end developer and life-long learner who is always looking for an opportunity to make the web more beautiful, accessible, and a better place for all.</p>
+                    <p>I have a background in content creation, which drives my interest in web development and the narratives we encounter while using the web. I love making seamless & functional user interfaces that people love to use.</p>
+                    <p>I'm currently working on learning technologies like React and Typescript and bringing my knowledge of motion design to the web with libraries like GSAP, anime.js and Three.js.</p>
                     <p>When I'm not behind a screen, I enjoy hiking, biking, film photography, collecting records, and making food with friends.</p>
-                    </p>
                 </div>
                 <a href="#contact" class="link-btn">Shoot me a message!</a>
             </div>
         </section>
         <section class="projects" id="projects">
             <div class="projects-container">
-                <div class="project">
-                    <img src="assets/project-1.png" alt="Project 1">
+                <div class="single-proj project1" id="project1-link">
+                    <div class="project-img bg-1">
+                        <img src="assets/p1.png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Willow's Blog</h3>
+                        <p>Pixel-perfect PSD to HTML conversion.</p>
+                        <div class="proj-lang">
+                            <i class="devicon-html5-plain small-icon"></i>
+                            <i class="devicon-sass-plain small-icon"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <img src="assets/project-2.png" alt="Project 2">
+                <div class="single-proj project2" id="project2-link">
+                    <div class="project-img bg-2">
+                        <img src="assets/p2.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>What's in your fridge?</h3>
+                        <p>Enter some ingredients you have in your fridge and get back meal ideas!</p>
+                        <div class="proj-lang">
+                            <i class="devicon-html5-plain small-icon"></i>
+                            <i class="devicon-css3-plain small-icon"></i>
+                            <i class="devicon-javascript-plain small-icon"></i>
+                        </div>
+                        <span>Paired Programming</span>
+                    </div>
                 </div>
-                <div class="project">
-                    <img src="assets/project-2.png" alt="Project 2">
+                <div class="single-proj project3">
+                    <div class="project-img bg-2" id="project3-link">
+                        <img src="assets/p3.png" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Film Explorer</h3>
+                        <p>Search and discover more about your favourite movies & hollywood stars.</p>
+                        <i class="devicon-react-plain small-icon"></i>
+                        <span>API Integration</span>
+                    </div>
                 </div>
-                <div class="project">
-                    <img src="assets/project-1.png" alt="Project 1">
+                <div class="single-proj project4">
+                    <div class="project-img bg-1">
+                        <img src="assets/p4.png" alt="Project 4">
+                    </div>
+                    <div class="project-info">
+                        <h3>Bingefest</h3>
+                        <p>You work so hard, it's time to take a load off! Explore TV series by genre, takeout food by location, or get a random food and movie combo to plan your night for you.</p>
+                        <div class="proj-lang">
+                            <i class="devicon-react-plain small-icon"></i>
+                            <i class="devicon-firebase-plain small-icon"></i>
+                        </div>
+                        <span>API Integration</span>
+                        <span>Mob Programming</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -113,7 +155,7 @@
     </main>
     <footer id="contact">
         <form action="mailto:erin.braz@gmail.com" method="get" enctype="text/plain">
-            <h2>Want to chat?</h2>
+            <h2>💬 Want to chat?</h2>
             <div class="name">
                 <label for="name">Name</label>
                     <input type="text" name="name" id="name" />
@@ -130,6 +172,10 @@
                 <input type="submit" name="submit" value="Send" />
                 <input type="reset" name="reset" value="Clear Form" />
             </div>
+            <div class="social-icons">
+                <!-- <a href="https://www.linkedin.com/in/erinbrazeau/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ebrazeau"><i class="fa-brands fa-github"></i></a>
+            </div> -->
         </form>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
