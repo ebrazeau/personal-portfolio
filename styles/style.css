@@ -675,10 +675,10 @@ main .projects .projects-container .project-info:hover {
   cursor: pointer;
 }
 main .projects .projects-container .bg-1 {
-  background: radial-gradient(circle, #5a49a7 0%, #3b2f6d 100%);
+  background: radial-gradient(circle, #705bce 0%, #514095 100%);
 }
 main .projects .projects-container .bg-2 {
-  background: radial-gradient(circle, #4f8690 0%, #273f44 100%);
+  background: radial-gradient(circle, #72c1cf 0%, #4f808a 100%);
 }
 main .skills {
   height: 550px;
