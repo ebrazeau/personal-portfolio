@@ -236,6 +236,7 @@ html {
 }
 
 header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,34 +250,41 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 1000px;
+  height: 100vh;
   background: #678dce;
 }
 header nav {
-  margin-bottom: 20px;
-  height: 30px;
-}
-header nav ul {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
+  top: 0px;
+}
+header nav ul {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 header nav ul li.nav-link {
+  font-weight: bolder;
   height: 100%;
   width: 100%;
   margin: 10px;
 }
 header div.hero {
   height: 90%;
-  width: 90%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +309,7 @@ header div.hero span {
   text-align: center;
 }
 
-@media (max-width: 885px) {
+@media (max-width: 1080px) {
   header div.hero h1 {
     font-size: 4.5rem;
     text-align: center;
@@ -322,7 +330,24 @@ header div.hero span {
     font-size: 3.5rem;
   }
   header div.hero span {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 375px) {
+  header {
+    background-color: #b0c8f3;
+  }
+}
+@media (max-width: 900px) and (max-height: 450px) {
+  header nav {
+    visibility: collapse;
+  }
+  header div.hero h1 {
+    font-size: 3.5rem;
+    line-height: 75px;
+  }
+  header div.hero span {
+    font-size: 1.2rem;
   }
 }
 footer {
@@ -385,6 +410,7 @@ footer form .name, footer form .email, footer form .comments {
 footer form .name label, footer form .email label, footer form .comments label {
   margin-bottom: 7px;
   text-align: start;
+  font-weight: bolder;
 }
 footer form .name input[type=text], footer form .email input[type=text], footer form .comments input[type=text] {
   width: 100%;
@@ -410,6 +436,23 @@ footer form .submit-form input[type=submit],
 footer form .submit-form input[type=reset] {
   margin: 2%;
   width: 250px;
+}
+footer form .submit-form input[type=submit]:hover,
+footer form .submit-form input[type=reset]:hover {
+  background-color: #ffa9a0;
+  margin: 2%;
+  width: 250px;
+}
+footer form .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 footer h2 {
   margin: 20px;
@@ -443,6 +486,52 @@ footer form .submit-form input[type=reset] {
   footer form h2 {
     line-height: 45px;
     margin-bottom: 0px;
+  }
+}
+@media (max-width: 375px) {
+  footer {
+    height: 100vh;
+  }
+  footer form {
+    height: 90vh;
+    width: 95%;
+  }
+  footer form .name, footer form .email {
+    height: 70px;
+  }
+  footer form .comments {
+    height: 250px;
+  }
+  footer form .submit-form input {
+    height: 50px;
+  }
+}
+@media (max-width: 950px) and (max-height: 500px) {
+  footer {
+    height: 175vh;
+  }
+  footer form {
+    height: 150vh;
+    width: 95%;
+  }
+  footer form h2 {
+    font-size: 1.7rem;
+    margin: 10px;
+  }
+  footer form .name, footer form .email {
+    height: 70px;
+  }
+  footer form .name label, footer form .email label {
+    font-size: 16px;
+  }
+  footer form .comments {
+    height: 250px;
+  }
+  footer form .comments label {
+    font-size: 16px;
+  }
+  footer form .comments textarea {
+    height: 150px;
   }
 }
 main .about {
@@ -481,10 +570,15 @@ main .about .text-container {
 }
 main .about .text-container h2 {
   margin-bottom: 40px;
+  line-height: 40px;
 }
 main .about .text-container .link-btn {
   margin-top: 40px;
   width: 400px;
+  text-align: center;
+}
+main .about .text-container .link-btn:hover {
+  background-color: rgba(200, 162, 230, 0.5);
 }
 main .projects {
   display: -webkit-box;
@@ -513,31 +607,78 @@ main .projects .projects-container {
           align-items: center;
   width: 1500px;
 }
-main .projects .projects-container .project {
-  margin: 10px;
+main .projects .projects-container .single-proj {
+  position: relative;
   width: 700px;
   height: 450px;
-  background-color: #4f8690;
-  border-radius: 20px;
-  border: 1px solid #cfcfcf;
-  -webkit-box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.5);
-          box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.5);
+  margin: 10px 0px;
 }
-main .projects .projects-container .project img {
+main .projects .projects-container .single-proj .project-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 20px;
+  border: 1.5px solid #cfcfcf;
+  -webkit-box-shadow: 2px 4px 8px rgba(46, 46, 46, 0.5);
+          box-shadow: 2px 4px 8px rgba(46, 46, 46, 0.5);
+}
+main .projects .projects-container .single-proj .project-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 20px;
 }
-main .projects .projects-container .project:hover {
+main .projects .projects-container .single-proj .project-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.637);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 10;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 25px;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .projects .projects-container .single-proj .project-info i {
+  font-size: 40px;
+  margin: 10px;
+}
+main .projects .projects-container .single-proj .project-info span {
+  font-size: 17px;
+}
+main .projects .projects-container .project-img:hover {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
   -webkit-box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.7);
           box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.7);
   cursor: pointer;
+}
+main .projects .projects-container .project-info:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+main .projects .projects-container .bg-1 {
+  background: radial-gradient(circle, #5a49a7 0%, #3b2f6d 100%);
+}
+main .projects .projects-container .bg-2 {
+  background: radial-gradient(circle, #4f8690 0%, #273f44 100%);
 }
 main .skills {
   height: 550px;
@@ -629,11 +770,11 @@ main .skills .languages .language-container span {
     margin: 0px;
   }
   main .projects {
-    height: 980px;
+    height: 1000px;
   }
   main .projects .projects-container {
     width: 100%;
-    height: 1000px;
+    height: 950px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -641,7 +782,8 @@ main .skills .languages .language-container span {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .projects .projects-container .project {
+  main .projects .projects-container .single-proj {
+    margin: 0px 10px;
     width: 45%;
   }
   main .skills {
@@ -675,7 +817,7 @@ main .skills .languages .language-container span {
   main .about .text-container .about-me {
     padding: 10px;
     width: 100%;
-    background-color: rgba(46, 46, 46, 0.2);
+    background-color: rgba(179, 179, 179, 0.2);
     overflow-y: scroll;
     margin: 30px;
   }
@@ -684,6 +826,7 @@ main .skills .languages .language-container span {
   }
   main .projects .projects-container {
     width: 100%;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -697,8 +840,27 @@ main .skills .languages .language-container span {
         -ms-flex-align: center;
             align-items: center;
   }
-  main .projects .projects-container .project {
-    width: 85%;
+  main .projects .projects-container .single-proj {
+    width: 100%;
+    margin: 10px;
+  }
+  main .projects .projects-container .single-proj .project-img, main .projects .projects-container .single-proj .project-info {
+    margin: 0 auto;
+    width: 90%;
+  }
+  main .projects .projects-container .single-proj .project-img img, main .projects .projects-container .single-proj .project-info img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .projects .projects-container .project3 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  main .projects .projects-container .project4 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
   main .skills {
     height: 900px;
@@ -741,6 +903,108 @@ main .skills .languages .language-container span {
   }
   main .skills .languages .language-container span {
     font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  main .about {
+    height: 140vh;
+  }
+  main .about .img-container {
+    width: 300px;
+    border-radius: 50%;
+  }
+  main .about .img-container img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  main .about .text-container {
+    padding: 30px 15px;
+    /* TRBL */
+    width: 95%;
+  }
+  main .about .text-container .about-me {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) and (max-height: 450px) {
+  main .about {
+    height: 300vh;
+  }
+  main .about .img-container {
+    width: 300px;
+    border-radius: 50%;
+  }
+  main .about .img-container img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  main .about .text-container {
+    padding: 30px 15px;
+    /* TRBL */
+    width: 90%;
+  }
+  main .about .text-container h2 {
+    font-size: 1.8rem;
+  }
+  main .about .text-container .about-me {
+    width: 100%;
+  }
+  main .projects {
+    height: 400vh;
+  }
+  main .projects .projects-container {
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .projects .projects-container .single-proj {
+    width: 100%;
+    height: 90vh;
+    margin: 10px;
+  }
+  main .projects .projects-container .single-proj .project-img, main .projects .projects-container .single-proj .project-info {
+    margin: 0 auto;
+    width: 90%;
+  }
+  main .projects .projects-container .single-proj .project-img img, main .projects .projects-container .single-proj .project-info img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  main .projects .projects-container .project3 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  main .projects .projects-container .project4 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  main .skills {
+    height: 125vh;
+  }
+  main .skills .languages {
+    height: 80vh;
+  }
+  main .skills .languages .language-container {
+    width: 120px;
+  }
+  main .skills .languages .language-container i {
+    font-size: 50px;
+  }
+  main .skills .languages .language-container span {
+    font-size: 16px;
   }
 }
 @font-face {
@@ -838,8 +1102,11 @@ input[type=reset],
   border: 0;
   padding: 15px 30px;
   background-color: #b8b8b8;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(124, 124, 124, 0.25)), to(rgba(51, 51, 51, 0.25)));
+  background: linear-gradient(rgba(124, 124, 124, 0.25), rgba(51, 51, 51, 0.25));
   display: block;
   border: 1px solid black;
+  border-radius: 10px;
 }
 
 button:hover,
