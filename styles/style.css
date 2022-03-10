@@ -251,7 +251,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #678dce;
+  background-color: #7ea2e6;
 }
 header nav {
   position: absolute;
@@ -269,6 +269,7 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   top: 5px;
+  line-height: 18px;
 }
 header nav ul {
   font-size: 16px;
@@ -535,7 +536,7 @@ footer form .submit-form input[type=reset] {
   }
 }
 main .about {
-  height: 75vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,6 +663,10 @@ main .projects .projects-container .single-proj .project-info i {
 }
 main .projects .projects-container .single-proj .project-info span {
   font-size: 17px;
+}
+main .projects .projects-container .single-proj .project-info .under-construction {
+  font-weight: bolder;
+  color: red;
 }
 main .projects .projects-container .project-img:hover {
   -webkit-transition: all 0.2s ease-in-out;
