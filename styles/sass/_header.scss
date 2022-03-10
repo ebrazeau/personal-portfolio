@@ -7,7 +7,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #678dce;
+    background-color: #7ea2e6;
     nav {
         position: absolute;
         display: flex;
@@ -15,6 +15,7 @@ header {
         justify-content: center;
         align-items: center;
         top: 5px;
+        line-height: 18px;
         ul {
             font-size: 16px;
             display: flex;

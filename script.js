@@ -12,7 +12,7 @@ const project3 = document.getElementsByClassName('project3');
 const project4 = document.getElementsByClassName('project4');
 
 const project1URL = "https://meet-willow.netlify.app/"
-const project2URL = "https://whats-in-your-fridge-eb-af.netlify.app"
+const project2URL = "https://whatsinyourfridge.netlify.app"
 const project3URL = "https://movie-finder-eb.netlify.app"
 const project4URL = "https://bingefest.netlify.app/"
 
@@ -29,4 +29,4 @@ const onProjectClick = (project, projectURL) => {
 onProjectClick(project1, project1URL);
 onProjectClick(project2, project2URL);
 onProjectClick(project3, project3URL);
-onProjectClick(project4, project4URL);
+// onProjectClick(project4, project4URL);

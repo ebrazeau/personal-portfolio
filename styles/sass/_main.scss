@@ -1,6 +1,6 @@
 main {
     .about {
-        height: 75vh;
+        height: 85vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -92,6 +92,10 @@ main {
                     }
                     span {
                         font-size: 17px;
+                    }
+                    .under-construction {
+                        font-weight: bolder;
+                        color: red;
                     }
                 }
             }
