@@ -636,7 +636,7 @@ main .projects .projects-container .single-proj .project-info {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.637);
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -667,13 +667,6 @@ main .projects .projects-container .single-proj .project-info span {
 main .projects .projects-container .single-proj .project-info .under-construction {
   font-weight: bolder;
   color: red;
-}
-main .projects .projects-container .project-img:hover {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.7);
-          box-shadow: 3px 5px 10px rgba(46, 46, 46, 0.7);
-  cursor: pointer;
 }
 main .projects .projects-container .project-info:hover {
   opacity: 1;
