@@ -224,9 +224,8 @@ main {
 @media (max-width: 885px) {
     main {
         .about {
-            height: 1300px;
             .img-container {
-                width: 400px;
+                width: 300px;
             }
             .text-container {
                 .about-me {
@@ -270,7 +269,6 @@ main {
             .languages {
                 .language-container {
                     margin: 15px;
-                    border: 1px solid black;
                     i {
                         font-size: 80px;
                     }
