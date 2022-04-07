@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <script src="https://kit.fontawesome.com/198a7912e2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.js"></script>
 </head>
 
 <body>
@@ -23,10 +24,11 @@
                 <li class="nav-link"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hero">
+        <div class="hero-text">
             <h1 class="logo">Erin Brazeau</h1>
             <span class="logo-sub">Front-end web developer</span>
         </div>
+        <canvas id="canvas-complex"></canvas>
     </header>
 
     <main>
@@ -35,13 +37,12 @@
                 <img src="assets/me-profile.png">
             </div>
             <div class="text-container">
-                <h2>👋🏻 Hello, I'm Erin!</h2>
+                <h2>👋🏻 Hello, I'm Erin! <span class="small-txt">(she/they)</span></h2>
                 <div class="about-me">
                     <p>I'm a self-taught front-end developer and life-long learner who is always looking for an opportunity to make the web more beautiful, accessible, and a better place for all.</p>
                     <p>With my strong background in content creation, my interest in web development is driven by my love for interaction design and the narratives we encounter
                     while using the web. I love making seamless & functional user interfaces that people love to use.
-                    Currently, I'm working on learning technologies like React and Typescript and bringing my knowledge of motion design to the web with libraries like GSAP, anime.js and Three.js.</p>
-                    <p>I'm currently working on learning technologies like React and Typescript and bringing my knowledge of motion design to the web with libraries like GSAP, anime.js and Three.js.</p>
+                    <p>I'm currently working on learning technologies like React and Typescript, and bringing my knowledge of motion design to the web with libraries like GSAP and p3.js.</p>
                     <p>When I'm not behind a screen, I enjoy hiking, biking, film photography, collecting records, and making food with friends.</p>
                 </div>
                 <a href="#contact" class="link-btn">Shoot me a message!</a>
@@ -109,30 +110,33 @@
         <section class="skills">
             <h2>Skills</h2>
             <div class="languages">
-                <div class="language-container">
-                    <i class="devicon-html5-plain"></i>
-                    <span>HTML5</span>
+                <div class="row row-1">
+                    <div class="language-container">
+                        <i class="devicon-html5-plain"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="language-container">
+                        <i class="devicon-css3-plain"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="language-container">
+                        <i class="devicon-javascript-plain"></i>
+                        <span>Javascript</span>
+                    </div>
+                    <div class="language-container">
+                        <i class="devicon-jquery-plain"></i>
+                        <span>jQuery</span>
+                    </div>
+                    <div class="language-container">
+                        <i class="devicon-firebase-plain"></i>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="language-container">
+                        <i class="devicon-react-original"></i>
+                        <span>React</span>
                 </div>
-                <div class="language-container">
-                    <i class="devicon-css3-plain"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="language-container">
-                    <i class="devicon-javascript-plain"></i>
-                    <span>Javascript</span>
-                </div>
-                <div class="language-container">
-                    <i class="devicon-jquery-plain"></i>
-                    <span>jQuery</span>
-                </div>
-                <div class="language-container">
-                    <i class="devicon-firebase-plain"></i>
-                    <span>Firebase</span>
-                </div>
-                <div class="language-container">
-                    <i class="devicon-react-original"></i>
-                    <span>React</span>
-                </div>
+            </div>
+            <div class="row row-2">
                 <div class="language-container">
                     <i class="devicon-github-original"></i>
                     <span>Github</span>
@@ -143,19 +147,24 @@
                 </div>
                 <div class="language-container">
                     <i class="devicon-aftereffects-plain"></i>
-                    <span>After Effects</span>
+                    <span>Aftereffects</span>
                 </div>
                 <div class="language-container">
                     <i class="devicon-photoshop-plain"></i>
                     <span>Photoshop</span>
                 </div>
-                <!-- <div class="language-container">
+                <div class="language-container">
                     <i class="devicon-illustrator-plain"></i>
                     <span>Illustrator</span>
-                </div> -->
+                </div>
+                <div class="language-container">
+                    <i class="devicon-figma-plain"></i>
+                    <span>Figma</span>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+</main>
     <footer id="contact">
         <form action="mailto:erin.braz@gmail.com" method="get" enctype="text/plain">
             <h2>💬 Want to chat?</h2>
